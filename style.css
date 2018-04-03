@@ -1,0 +1,40 @@
+table{
+   border: 1px solid black;
+}
+
+tr, td {
+   border: 0.5px solid red;
+   width: 100px;
+   height: 100px;
+   text-align: center;
+}
+
+td:hover {
+  background-color: yellow;
+}
+
+td:active {
+  background: green;
+}
+
+#reset {
+  width: 50%;
+  height: 100px;
+  float: center;
+}
+
+button{
+  width: 60px;
+  height: 60px;
+  float: right;
+}
+
+#table{
+  width: 50%;
+  float: left;
+}
+
+#form{
+  width: 33%;
+  float left;
+}
