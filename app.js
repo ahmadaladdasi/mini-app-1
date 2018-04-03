@@ -13,7 +13,8 @@ var board = [[signR,signR,signR],
 const resetGame = () => {
    player = [signX,signO];
    current_player = player[0];
-
+   players_names = [document.getElementById('name1').innerHTML,document.getElementById('name2').innerHTML]
+   console.log(players_names);
    board = [[signR,signR,signR],
                [signR,signR,signR],
                [signR,signR,signR]];
@@ -65,7 +66,7 @@ const checkWin = () => {
     alert(`${current_player} won`);
     resetGame();
   }
-  else if(((board[0][1]) === board[1][1]) && ((board[0][1]) === board[0][2]) && (board[0][1] !== signR )&& (board[1][1] !== signR)){
+  else if(((board[0][1]) === board[1][1]) && ((board[0][1]) === board[2][1]) && (board[0][1] !== signR )&& (board[1][1] !== signR)){
     alert(`${current_player} won`);
     resetGame();
 
@@ -87,10 +88,17 @@ const checkWin = () => {
 
 }
 
-
+const setNames = () => {
+  
+}
 
 document.addEventListener("DOMContentLoaded", function(event) {
     //Do work
+    document.getElementById('names').addEventListener("click", (e) =>{
+      event.preventDefault();
+      console.log(e);
+    });
     document.getElementById('tab').addEventListener("click", (e) => {modifyBoard([parseInt(e.target.id.slice(3,4)),parseInt(e.target.id.slice(8,9))])});
     document.getElementById("reset").addEventListener("click", () => {resetGame()});
+
 });

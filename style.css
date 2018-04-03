@@ -18,9 +18,9 @@ td:active {
 }
 
 #reset {
-  width: 50%;
+  width: 10%;
   height: 100px;
-  float: center;
+  float: left;
 }
 
 button{
@@ -35,6 +35,13 @@ button{
 }
 
 #form{
-  width: 33%;
+  height: 200px;
+  width: 25%;
   float left;
+}
+
+h3{
+  float: right;
+  /* display: inline; */
+  width: 25%;
 }
